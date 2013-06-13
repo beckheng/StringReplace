@@ -9,6 +9,9 @@ Dialog::Dialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    this->ui->lineEdit_search->setText(QString("\\$Form{['\"]([\\w|\\.]+)['\"]}"));
+    this->ui->lineEdit_replace->setText(QString("CommonUtil.getStringParameter(request.getParameter(\"\\1\"), \"\")"));
+
     this->ui->plainTextEdit_src->setFocus();
 }
 
